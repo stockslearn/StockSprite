@@ -58,6 +58,7 @@ NSString * const kHangqingDidRefreshNotification = @"kHangqingDidRefreshNotifica
     }
     
     NSURLRequest *request = [NSURLRequest requestWithURL: [NSURL URLWithString: self.strUrl]];
+    NSLog(@"request.URL-----%@",request.URL);
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest: request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error != nil) {
             NSLog(@"refresh hanging error: %@", error);
